@@ -1,0 +1,25 @@
+{
+  "name": "expressform-backend",
+  "version": "1.0.0",
+  "description": "tes express form ",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "author": "Wisam Ahmad Risqi Armana",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "expressform-backend": "file:",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "mongoose-paginate-v2": "^1.9.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.5.0",
+    "nodemon": "^3.1.9"
+  }
+}
