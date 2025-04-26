@@ -103,7 +103,7 @@ class AuthController {
             if (!req.body.refreshToken) { throw { code: 400, message: 'REFRESH_TOKEN_IS_REQUIRED' } }
 
             //verify refresh token
-            const verify = await jsonwebtoken.verify(req.body.refreshToken, env.JWT_REFRESH_TOKEN_SECRET)
+            const verify = await jsonwebtoken.verify(req.body.refreshToken, process.env.JWT_REFRESH_TOKEN_SECRET)
 
             let payload = { id: verify.id }
             const accessToken = await generateAccessToken(payload)

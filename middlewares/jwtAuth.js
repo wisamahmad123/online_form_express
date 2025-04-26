@@ -9,7 +9,7 @@ const jwtAuth = () => {
             if (!req.headers.authorization) { throw { code: 401, message: 'UNAUTHORIZED' } }
 
             const token = req.headers.authorization.split(' ')[1] // Bearer <token>
-            const verify = jsonwebtoken.verify(token, env.JWT_ACCESS_TOKEN_SECRET)
+            const verify = jsonwebtoken.verify(token, process.env.JWT_ACCESS_TOKEN_SECRET)
             req.jwt = verify
 
             next()
