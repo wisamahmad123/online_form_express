@@ -18,6 +18,4 @@ app.use((req, res) => {
 // MongoDB Connection
 connection()
 
-app.listen(env.APP_PORT, () => {
-  console.log(`Example app listening on port ${env.APP_PORT}`)
-})
+export default app
