@@ -9,13 +9,13 @@ const env = dotenv.config().parsed
 
 const generateAccessToken = async (payload) => {
     return jsonwebtoken.sign(payload,
-        env.JWT_ACCESS_TOKEN_SECRET,
-        { expiresIn: env.JWT_ACCESS_TOKEN_EXPIRATION_TIME })
+        process.env.JWT_ACCESS_TOKEN_SECRET,
+        { expiresIn: process.env.JWT_ACCESS_TOKEN_EXPIRATION_TIME })
 }
 const generateRefreshToken = async (payload) => {
     return jsonwebtoken.sign(payload,
-        env.JWT_REFRESH_TOKEN_SECRET,
-        { expiresIn: env.JWT_REFRESH_TOKEN_EXPIRATION_TIME })
+        process.env.JWT_REFRESH_TOKEN_SECRET,
+        { expiresIn: process.env.JWT_REFRESH_TOKEN_EXPIRATION_TIME })
 }
 
 class AuthController {
